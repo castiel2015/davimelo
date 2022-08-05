@@ -1,0 +1,904 @@
+<html>
+
+<head>
+
+   <title> David Melo </title>
+
+   <style>
+      html {
+         scroll-behavior: smooth;
+      }
+
+      /* ESTA DENTRO DE STYLE É TUDO CSS */
+
+      * {
+         box-sizing: border-box;
+         margin: 0px;
+         padding: 0px;
+      }
+
+
+      body {
+         background: #0e0f10;
+         color: white;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .tabela-principal {
+         /* aqui é parte css da tabela*/
+         width: 100%;
+         height: 100vh;
+         border-collapse: collapse;
+      }
+
+      .cabecalho {
+         background: black;
+         color: blue;
+         height: 200px;
+      }
+
+
+
+      .table-body {
+         vertical-align: top;
+         padding-left: 25%;
+         padding-right: 15%;
+      }
+
+      .title {
+         margin-top: 50px;
+         margin-bottom: 50px;
+
+         text-align: center;
+      }
+
+      .card-box {
+         display: flex;
+      }
+
+      .card-box-img img {
+         height: 200px;
+         border-radius: 50%;
+      }
+
+      .card-box-body {
+         margin-left: 20px;
+      }
+
+      .menu {
+         width: 10%;
+         background: #1d1d22;
+         padding: 20px;
+         vertical-align: top;
+         text-align: center;
+         position: fixed;
+         height: 100%;
+      }
+
+      .menu a {
+         color: white;
+         text-decoration: none;
+      }
+
+      .menu a:hover {
+         color: #25ca7f
+      }
+
+      .menu i {
+         font-size: 30px;
+      }
+
+      .menu p {
+         margin-bottom: 50px;
+      }
+
+      .menu .logo {
+         /*font-size: 40px;*/
+         /*font-weight: 600;*/
+         /* border-bottom: 2px solid #25ca7f;*/
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 50px;
+      }
+
+      .service-container {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .service-container .service-item {
+         width: calc(33.33% - 32px);
+         /* margin-bottom: 16px; */
+         margin: 16px;
+
+      }
+
+      .service-container .service-item .service-item-card {
+         border: 1px solid black;
+         height: 300px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .service-container .service-item .service-item-card:hover {
+         border: solid 1px #25ca7f;
+      }
+
+      .service-item .service-item-card .service-item-card-icon {
+         background-color: #0e0f10;
+         height: 80px;
+         border-radius: 1px solid black;
+         width: 80px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+      }
+
+
+
+      .service-item .service-item-card .service-item-card-icon:hover {
+         border: 1px solid #25ca7f;
+
+      }
+
+      .service-item .service-item-card .service-item-card-icon {
+         font-size: 30px;
+
+      }
+
+      .service-item .service-item-card .service-item-card-title {
+         margin-top: 16px;
+         margin-bottom: 16px;
+      }
+
+      .service-item .service-item-card .service-item-card-description {
+         text-align: center;
+      }
+
+      .flexbox {
+         display: flex;
+         gap: 30px;
+      }
+
+      .flexbox-item {
+         width: 50%;
+      }
+
+      .card {
+         background: #070708;
+         padding: 30px;
+         border-radius: 8px;
+
+      }
+
+      .timeline-item {
+         padding-bottom: 30px;
+         font-size: 15px;
+         border-left: 1px solid #25ca7f;
+         padding-left: 32px;
+         position: relative;
+      }
+
+      .timeline-item-period {
+         font-size: 12px;
+         color: #25ca7f;
+         margin-top: 8px;
+         margin-bottom: 8px;
+      }
+
+
+      .timeline-item-marker {
+         display: flex;
+         align-items: center;
+         position: absolute;
+         top: 8px;
+         left: -8px;
+
+      }
+
+      .timeline-item-marker-circle {
+         height: 15px;
+         width: 15px;
+         background: #25ca7f;
+         border-radius: 50%;
+      }
+
+
+      .timeline-item-marker-line {
+         /* é a 3 caixa */
+
+         height: 1px;
+         width: 15px;
+         background: #25ca7f;
+      }
+
+      #aboutMeSction,
+      #experienceSection,
+      #contactSection {
+         scroll-margin-top: 50px;
+      }
+
+      .progress-bar {
+         background-color: #0e0f10;
+         height: 8px;
+         border-radius: 8px;
+         position: relative;
+         margin-bottom: 60px;
+      }
+
+      .progress-bar-done {
+         background: #25ca7f;
+         height: 100%;
+         border-radius: 8px;
+         position: relative;
+      }
+
+      .bolinha-da-barra {
+         height: 20px;
+         width: 20px;
+         border: 4px solid #25ca7f;
+         border-radius: 50%;
+         position: absolute;
+         right: 0px;
+         top: -6px;
+         background-color: #0e0f10;
+      }
+
+      .progress-bar-title {
+         position: absolute;
+         top: -30px;
+      }
+
+      .progress-bar-done-text {
+         position: absolute;
+         top: -30px;
+         right: 0px;
+      }
+
+      .padding-top-60 {
+         padding-top: 60px;
+      }
+
+      .contact-item {
+         text-align: center;
+         flex-direction: column;
+         width: 30%;
+         align-items: center;
+         gap: 20px;
+
+      }
+
+      .contact-item-icon {
+         font-size: 40px;
+         border: 1px solid #25ca7f;
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .card:hover {
+         border: 1px solid #25ca7f;
+      }
+
+      .logo {
+         transform: translatey(0px);
+         animation: float 10s ease-in-out infinite;
+      }
+
+      @keyframes float {
+         0% {
+
+            transform: translateY (0px);
+         }
+
+         50% {
+            transform: translateY(-30px);
+         }
+
+         100% {
+            transform: translateY(0px);
+         }
+      }
+
+
+
+
+      h2.fill-animation {
+         position: relative;
+         color: #252839;
+         -webkit-text-stroke: 1px #383d52;
+         text-transform: uppercase;
+         font-size: 60px;
+
+      }
+
+      h2.fill-animation::before {
+         content: attr(data-text);
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 0;
+         height: 100%;
+         color: #01fe87;
+         -webkit-text-stroke: 0vw #383d52;
+        /* border-right: 2px solid #01fe87;*/
+         overflow: hidden;
+         animation: animate 6s linear infinite;
+      }
+
+      @keyframes animate {
+
+
+         0%,
+         10% {
+            width: 0;
+         }
+
+         70%,
+         90%,
+         100% {
+            width: 100%;
+         }
+      }
+   </style>
+
+
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <table class="tabela-principal">
+
+
+      <tr>
+
+         <td class="menu">
+            <div class="logo">
+               <h2 data-text="CV" class="fill-animation">CV</h2>
+            </div>
+
+
+
+            <p>
+               <a href="#AboutMeSection">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <!--Sobre min-->
+               </a>
+            </p>
+
+            <p>
+               <a href="#experienceSection">
+                  <i class="fa-solid fa-book"></i>
+                  <!--Profissional-->
+               </a>
+            </p>
+
+            <p>
+               <a href="#contactSection">
+                  <i class="fa-solid fa-envelope"></i>
+                  <!--Contato-->
+               </a>
+            </p>
+
+
+         </td>
+
+
+         <td class="table-body">
+            <!--Parte maior da tabela-->
+
+            <div id="AboutMeSection" style=" min-height: 1000px;">
+
+               <h1 class="title"> Sobre mim </h1>
+
+               <div class="card-box card">
+
+                  <div class="card-box-img">
+                     <img src="./img/PERFIL VERMELHA 2.png" alt="">
+
+                  </div>
+
+                  <div class="card-box-body">
+
+                     <p>
+                     <h3> David Melo </h3>
+                     </p>
+                     <p>
+                     <h4> Novo horizonte, SP </h4>
+                     </p>
+
+                     <p> Oi ! Meu nome é David Melo e sou desenvolvedor iniciante , ainda não tenho experiência de
+                        trabalho em nenhuma empresa, mas tenho experiência em alguns projetos pessoais.
+                        Atualmente meu trabalho tem sido como Desenvolvedor Full Stack no meu projeto principal.
+                     </p>
+
+
+                     <p> Tenho alguns compromissos também e hobbies, os que mais gosto é ler livros, principalmente a
+                        BÍBLIA onde aprendo princípios de como
+                        viver e como tratar as pessoas e também como devo criar meus filhos. </p>
+
+
+                  </div>
+               </div>
+
+               <h2 class="title"> Areas de Atuação</h2>
+               <div class="service-container">
+                  <div class="service-item">
+                     <div class="service-item-card card">
+                        <div class="service-item-card-icon">
+                           <i class="fa-solid fa-display"></i>
+
+                        </div>
+
+                        <!--1 CAXINHA DE SERVICE-->
+                        <div class="service-item-card-title">
+                           <h3> Front end Developer</h3>
+
+                        </div>
+
+                        <div class="service-item-card-description">
+                           <span>Html, Javascript (Angular, JQuery, React), Css...</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+                  <!--2 CAXINHA DE SERVICE-->
+                  <div class="service-item">
+                     <div class="service-item-card card">
+                        <div class="service-item-card-icon">
+                           <i class="fa-solid fa-server"></i>
+
+                        </div>
+
+                        <div class="service-item-card-title">
+                           <h3>Back End Developer</h3>
+
+                        </div>
+
+                        <div class="service-item-card-description">
+                           <span>Node, PHP(Zend Framework, Slim Framework, Laravel), Java, etc...</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+                  <!--3 CAXINHA DE SERVICE-->
+                  <div class="service-item">
+                     <div class="service-item-card card">
+                        <div class="service-item-card-icon">
+                           <i class="fa-solid fa-mobile-screen"></i>
+
+                        </div>
+
+                        <div class="service-item-card-title">
+                           <h3>Mobile Developer</h3>
+
+                        </div>
+
+                        <div class="service-item-card-description">
+                           <span>Android, React Native, Ionic, etc...</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+                  <!--4 CAXINHA DE SERVICE-->
+                  <div class="service-item">
+                     <div class="service-item-card card">
+                        <div class="service-item-card-icon">
+                           <i class="fa-solid fa-database"></i>
+
+                        </div>
+
+                        <div class="service-item-card-title">
+                           <h3>Data Modeling</h3>
+
+                        </div>
+
+                        <div class="service-item-card-description">
+                           <span>MySQL, PostGres, etc...</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+
+
+                  <!--5 CAXINHA DE SERVICE-->
+                  <div class="service-item">
+                     <div class="service-item-card card">
+                        <div class="service-item-card-icon">
+                           <i class="fa-solid fa-plus"></i>
+
+                        </div>
+
+                        <div class="service-item-card-title">
+                           <h3> Other</h3>
+
+                        </div>
+
+                        <div class="service-item-card-description">
+                           <span>Pentaho BI Solutions, MetaQuotes, R Studio</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+            </div>
+            <div id="experienceSection" style=" min-height: 1000px;">
+               <h1 class="title">Resumo</h1>
+               <div class="flexbox">
+                  <div class="flexbox-item">
+                     <h2 class="title">
+                        Experiência Profissional
+                     </h2>
+                     <div class="card">
+                        <div class="timeline-item">
+                           <div class="timeline-item-marker">
+
+                              <div class="timeline-item-marker-circle">
+
+
+                              </div>
+
+                              <div class="timeline-item-marker-line">
+
+                              </div>
+
+                           </div>
+
+
+                           <h3> Full Stack Developer | Mobile <h3>
+
+                                 <p class="timeline-item-period">
+                                    <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                 </p>
+
+                                 <h4> Beepay is a start up with an innovative retail project, the goal is to
+                                    eliminate the use of trolleys within supermarkets, improve the shopping
+                                    experience for the consumer and provide strategic customer consumption data for
+                                    the retailer to improve sales.
+                                    Within Start Up I was responsible for integrating Beepay and supermarkets,
+                                    developing and improving the mobile app and displaying the data to the merchant.
+                                    The main technologies used were: PostGres, Laravel (PHP), Ionic, JQuery, Twitter
+                                    Bootstrap.
+                                 </h4>
+
+                        </div>
+                        <div class="timeline-item">
+                           <div class="timeline-item-marker">
+
+                              <div class="timeline-item-marker-circle">
+
+
+                              </div>
+
+                              <div class="timeline-item-marker-line">
+
+                              </div>
+
+                           </div>
+
+
+                           <h3> Full Stack Developer | Mobile <h3>
+
+                                 <p class="timeline-item-period">
+                                    <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                 </p>
+
+                                 <h4> Beepay is a start up with an innovative retail project, the goal is to
+                                    eliminate the use of trolleys within supermarkets, improve the shopping
+                                    experience for the consumer and provide strategic customer consumption data for
+                                    the retailer to improve sales.
+                                    Within Start Up I was responsible for integrating Beepay and supermarkets,
+                                    developing and improving the mobile app and displaying the data to the merchant.
+                                    The main technologies used were: PostGres, Laravel (PHP), Ionic, JQuery, Twitter
+                                    Bootstrap.
+                                 </h4>
+
+                        </div>
+                        <div class="timeline-item">
+                           <div class="timeline-item-marker">
+
+                              <div class="timeline-item-marker-circle">
+
+
+                              </div>
+
+                              <div class="timeline-item-marker-line">
+
+                              </div>
+
+                           </div>
+
+
+                           <h3> Full Stack Developer | Mobile <h3>
+
+                                 <p class="timeline-item-period">
+                                    <i class="fa-solid fa-calendar-days"></i> 2018 - December 2019 | Beepay
+                                 </p>
+
+                                 <h4> Beepay is a start up with an innovative retail project, the goal is to
+                                    eliminate the use of trolleys within supermarkets, improve the shopping
+                                    experience for the consumer and provide strategic customer consumption data for
+                                    the retailer to improve sales.
+                                    Within Start Up I was responsible for integrating Beepay and supermarkets,
+                                    developing and improving the mobile app and displaying the data to the merchant.
+                                    The main technologies used were: PostGres, Laravel (PHP), Ionic, JQuery, Twitter
+                                    Bootstrap.
+                                 </h4>
+
+                        </div>
+                     </div>
+
+                  </div>
+
+
+
+                  <div class="flexbox-item">
+                     <h2 class="title">Educação</h2>
+                     <div class="card">
+
+                        <div class="timeline-item">
+                           <div class="timeline-item-marker">
+
+                              <div class="timeline-item-marker-circle">
+
+
+                              </div>
+
+                              <div class="timeline-item-marker-line">
+
+                              </div>
+
+                           </div>
+
+
+                           <h3> Graduate <h3>
+
+                                 <p class="timeline-item-period">
+                                    <i class="fa-solid fa-calendar-days"></i> 2022 - December 2019 | Escola da vida
+                                 </p>
+
+                                 <h4> Nesta escola eu não aprendi absolutamente nada.
+                                 </h4>
+
+                        </div>
+
+                     </div>
+
+
+
+                  </div>
+
+               </div>
+
+
+               <h2 class="title"> Tecnologias </h2>
+               <div class="card padding-top-60">
+
+                  <div class="progress-bar">
+                     <!--1 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        PHP
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 30%;">
+                        <div class="progress-bar-done-text">
+                           30%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--2 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        HTML5
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 30%;">
+                        <div class="progress-bar-done-text">
+                           30%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--3 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        JavaScript
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 30%;">
+                        <div class="progress-bar-done-text">
+                           30%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--4 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        PostGres
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 15%;">
+                        <div class="progress-bar-done-text">
+                           15%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--5 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        MySql
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 15%;">
+                        <div class="progress-bar-done-text">
+                           15%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--6 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        MQL
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 15%;">
+                        <div class="progress-bar-done-text">
+                           15%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--7 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        CSS3
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 15%;">
+                        <div class="progress-bar-done-text">
+                           15%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="progress-bar">
+                     <!--8 LINHA DA BARRA DE PROGRESSO-->
+                     <div class="progress-bar-title">
+                        UI/UX Designer
+                     </div>
+
+                     <div class="progress-bar-done" style="width: 18%;">
+                        <div class="progress-bar-done-text">
+                           18%
+                        </div>
+                        <div class="bolinha-da-barra">
+
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+            </div>
+
+            <div id="contactSection" style=" height: 1000px;">
+               <h1 class="title">Contato</h1>
+               <div class="card flexbox">
+
+                  <div class="contact-item flexbox">
+                     <div class="contact-item-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                     </div>
+
+                     <div class="contact-item-value">
+                        desenvolvedor.davimelo@gmail.com
+                     </div>
+                     <div class="contact-item-description">
+                        Email
+                     </div>
+
+                  </div>
+
+
+                  <div class="contact-item flexbox">
+                     <div class="contact-item-icon">
+                        <i class="fa-solid fa-paper-plane"></i>
+                     </div>
+                     <div class="contact-item-value">
+                        @Davi_Meloo
+                     </div>
+                     <div class="contact-item-description">
+                        Telegram
+                     </div>
+
+                  </div>
+
+
+                  <div class="contact-item flexbox">
+                     <div class="contact-item-icon">
+                        <i class="fas fa-phone"></i>
+                     </div>
+                     <div class="contact-item-value">
+                        (+55) 17 98160 3257 Vivo
+                     </div>
+                     <div class="contact-item-description">
+                        Telefone
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </td>
+      </tr>
+
+
+
+
+   </table>
+
+</body>
+
+
+</html>
